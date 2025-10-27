@@ -78,3 +78,16 @@ plot v(out)
 .end
 
 ```
+## Conclusion
+In this project, a Current-Starved Voltage Controlled Os
+cillator (VCO) was successfully designed and simulated using
+ eSim. The output frequency was observed to vary with changes
+ in the input control voltage, confirming the voltage-controlled
+ nature of the circuit. As the control voltage increased, the
+ oscillation frequency also increased due to higher current in
+ the delay stages, resulting in faster charging and discharging
+ of capacitors. The circuit achieved stable oscillations with
+ efficient power consumption from the DC supply. The results  demonstrate that the output frequency of the current-starved
+ VCO can be tuned by adjusting the input voltage, making it
+ suitable for applications such as phase-locked loops (PLLs)
+ and frequency synthesizers in communication systems.
