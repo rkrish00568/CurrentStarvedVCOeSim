@@ -14,6 +14,8 @@ The reference design for the Current-Starved Voltage Controlled Oscillator (VCO)
 
 
 ## Simulation in esim
+### Circuit in eSim
+![Reference Ckt](images/ckt.png)
 ### For input V=1volt
 ![Reference Ckt](images/1v.png)
 ### For input V=0.7volt
