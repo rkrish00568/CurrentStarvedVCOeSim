@@ -20,6 +20,10 @@ The reference design for the Current-Starved Voltage Controlled Oscillator (VCO)
 ![Reference Ckt](images/ckt.png)
 ### For input V=1volt
 ![Reference Ckt](images/1v.png)
+### For input V=0.5volt
+![Reference Ckt](images/0.5v.png)
+### For input V=1.2volt
+![Reference Ckt](images/1.2v.png)
 ### For input V=0.7volt
 ![Reference Ckt](images/0.7v.png)
 ### For input V=1.5volt
