@@ -10,3 +10,13 @@ The reference design for the Current-Starved Voltage Controlled Oscillator (VCO)
 ## Tools Used:
 • esim:  esim design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. esim provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.
 ![eSim](images/esim.png)
+• IHP PDK: The IHP Process Design Kit (PDK) provides a comprehensive set of models, design rules, and libraries for simulating and fabricating CMOS and BiCMOS circuits. It enables accurate analog, digital, and mixed-signal circuit design, supporting advanced nodes like SG13G2 (130 nm). The PDK ensures precise device behavior representation, making it ideal for research and development in high-performance RF, analog, and low-power applications.
+
+
+## Simulation in esim
+### For input V=1volt
+![Reference Ckt](images/1v.png)
+### For input V=0.7volt
+![Reference Ckt](images/0.7v.png)
+### For input V=1.5volt
+![Reference Ckt](images/1.5v.png)
