@@ -7,3 +7,5 @@ The reference design for the Current-Starved Voltage Controlled Oscillator (VCO)
 ## Reference Circuit Diagram
 
 ![Reference Ckt](images/refckt.png)
+## Tools Used:
+• esim:  esim design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. esim provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.
