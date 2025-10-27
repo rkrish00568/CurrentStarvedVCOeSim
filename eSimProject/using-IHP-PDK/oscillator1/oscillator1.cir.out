@@ -1,0 +1,50 @@
+* c:\users\lenovo\esim-workspace\oscillator1\oscillator1.cir
+
+* Load OSDI model interface and PDK model files
+
+
+.lib /home/krish/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
+.control
+pre_osdi /home/krish/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/osdi/psp103_nqs.osdi
+.endc
+* Transistor-level netlist
+xm5 net-_m10-pad4_ net-_m1-pad1_ net-_m5-pad3_ net-_m10-pad4_ sg13_lv_pmos W=2u L=180n M=1
+xm9 net-_m10-pad4_ net-_m1-pad1_ net-_m10-pad1_ net-_m10-pad4_ sg13_lv_pmos W=2u L=180n M=1
+xm13 net-_m10-pad4_ net-_m1-pad1_ net-_m13-pad3_ net-_m10-pad4_ sg13_lv_pmos W=2u L=180n M=1
+xm17 net-_m10-pad4_ net-_m1-pad1_ net-_m17-pad3_ net-_m10-pad4_ sg13_lv_pmos W=2u L=180n M=1
+xm21 net-_m10-pad4_ net-_m1-pad1_ net-_m21-pad3_ net-_m10-pad4_ sg13_lv_pmos W=2u L=180n M=1
+xm6 net-_m5-pad3_ out net-_m10-pad2_ net-_m10-pad4_ sg13_lv_pmos W=1u L=180n M=1
+xm10 net-_m10-pad1_ net-_m10-pad2_ net-_m10-pad3_ net-_m10-pad4_ sg13_lv_pmos W=1u L=180n M=1
+xm14 net-_m13-pad3_ net-_m10-pad3_ net-_m11-pad1_ net-_m10-pad4_ sg13_lv_pmos W=1u L=180n M=1
+xm18 net-_m17-pad3_ net-_m11-pad1_ net-_m15-pad1_ net-_m10-pad4_ sg13_lv_pmos W=1u L=180n M=1
+xm22 net-_m21-pad3_ net-_m15-pad1_ out net-_m10-pad4_ sg13_lv_pmos W=1u L=180n M=1
+xm2 net-_m10-pad4_ net-_m1-pad1_ net-_m1-pad1_ net-_m10-pad4_ sg13_lv_pmos W=2u L=180n M=1
+xm3 net-_m10-pad2_ out net-_m3-pad3_ gnd sg13_lv_nmos W=1u L=180n M=1
+xm7 net-_m10-pad3_ net-_m10-pad2_ net-_m7-pad3_ gnd sg13_lv_nmos W=1u L=180n M=1
+xm11 net-_m11-pad1_ net-_m10-pad3_ net-_m11-pad3_ gnd sg13_lv_nmos W=1u L=180n M=1
+xm15 net-_m15-pad1_ net-_m11-pad1_ net-_m15-pad3_ gnd sg13_lv_nmos W=1u L=180n M=1
+xm19 out net-_m15-pad1_ net-_m19-pad3_ gnd sg13_lv_nmos W=1u L=180n M=1
+xm4 net-_m3-pad3_ net-_m1-pad2_ gnd gnd sg13_lv_nmos W=2u L=180n M=1
+xm8 net-_m7-pad3_ net-_m1-pad2_ gnd gnd sg13_lv_nmos W=2u L=180n M=1
+xm12 net-_m11-pad3_ net-_m1-pad2_ gnd gnd sg13_lv_nmos W=2u L=180n M=1
+xm16 net-_m15-pad3_ net-_m1-pad2_ gnd gnd sg13_lv_nmos W=2u L=180n M=1
+xm20 net-_m19-pad3_ net-_m1-pad2_ gnd gnd sg13_lv_nmos W=2u L=180n M=1
+xm1 net-_m1-pad1_ net-_m1-pad2_ gnd gnd sg13_lv_nmos W=2u L=180n M=1
+
+* Power supplies
+v1 net-_m1-pad2_ gnd  dc 1
+v2 net-_m10-pad4_ gnd  dc 1.8
+
+* Initial condition to start oscillation
+.ic v(out)=0.1
+
+.tran 1e-12 20e-9
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(out)
+.endc
+.end
