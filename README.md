@@ -91,3 +91,10 @@ cillator (VCO) was successfully designed and simulated using
  VCO can be tuned by adjusting the input voltage, making it
  suitable for applications such as phase-locked loops (PLLs)
  and frequency synthesizers in communication systems.
+
+
+## Acknowledgement
+1. FOSSEE,IIT Bombay
+
+## References
+1. https://www.irjet.net/archives/V5/i3/IRJET-V5I3191.pdf
